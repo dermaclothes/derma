@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DERMA | Luxury Basic Specialist</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <div class="promo-bar">
+        <div class="promo-track">
+            <span>✨ GRATIS ONGKIR SELURUH INDONESIA - MINIMAL ORDER 2 PCS ✨</span>
+            <span>✨ NEW ARRIVAL: DERMA SIGNATURE COLLECTION 2026 ✨</span>
+            <span>✨ GRATIS ONGKIR SELURUH INDONESIA - MINIMAL ORDER 2 PCS ✨</span>
+        </div>
+    </div>
+
+    <nav>
+        <div class="nav-container">
+            <div class="logo">
+                <a href="#"><img src="logo derma.jpeg" alt="Logo DERMA"></a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#" class="active">Home</a></li>
+                <li><a href="#produk">Collection</a></li>
+                <li><a href="#testimoni">Reviews</a></li>
+                <li><a href="https://wa.me/6285275284400" class="nav-cta">Hubungi Kami</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <span class="sub-title">Premium Daily Wear</span>
+            <h1>Define Your <br><em>Timeless</em> Elegance.</h1>
+            <p>Koleksi kemeja eksklusif yang dirancang untuk kenyamanan maksimal dan rasa percaya diri yang tak tertandingi.</p>
+            <div class="hero-btns">
+                <a href="#produk" class="btn-primary">Shop Now</a>
+                <a href="#testimoni" class="btn-secondary">Lihat Testimoni</a>
+            </div>
+        </div>
+    </header>
+
+    <section class="benefits">
+        <div class="benefit-item">
+            <i class="fa-solid fa-gem"></i>
+            <h4>High Quality</h4>
+            <p>Bahan pilihan kualitas ekspor</p>
+        </div>
+        <div class="benefit-item">
+            <i class="fa-solid fa-leaf"></i>
+            <h4>Breathable</h4>
+            <p>Nyaman & menyerap keringat</p>
+        </div>
+        <div class="benefit-item">
+            <i class="fa-solid fa-shield-heart"></i>
+            <h4>Durable</h4>
+            <p>Warna awet & tidak mudah kusut</p>
+        </div>
+    </section>
+
+    <section class="products-section" id="produk">
+        <div class="section-header">
+            <span class="tag">Curated Selection</span>
+            <h2 class="section-title">Essential Collection</h2>
+            <div class="line"></div>
+        </div>
+
+        <div class="product-grid">
+            <div class="product-card">
+                <div class="card-img">
+                    <div class="badge-gold">Top Seller</div>
+                    <img src="basic.jpg" alt="DERMA Signature">
+                    <div class="overlay-action">
+                        <button onclick="openModal('DERMA Signature Shirt')">Quick View</button>
+                    </div>
+                </div>
+                <div class="product-info">
+                    <h3>DERMA Signature Shirt</h3>
+                    <p class="price">Rp 120.000</p>
+                    <button class="btn-buy-now" onclick="openModal('DERMA Signature Shirt')">Order via WhatsApp</button>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="card-img">
+                    <img src="salur.jpg" alt="Kemeja Salur">
+                    <div class="overlay-action">
+                        <button onclick="openModal('Kemeja Salur Premium')">Quick View</button>
+                    </div>
+                </div>
+                <div class="product-info">
+                    <h3>Kemeja Salur Premium</h3>
+                    <p class="price">Rp 135.000</p>
+                    <button class="btn-buy-now" onclick="openModal('Kemeja Salur Premium')">Order via WhatsApp</button>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="card-img">
+                    <img src="pendek.jpg" alt="Kemeja Pendek">
+                    <div class="overlay-action">
+                        <button onclick="openModal('Kemeja Lengan Pendek')">Quick View</button>
+                    </div>
+                </div>
+                <div class="product-info">
+                    <h3>Kemeja Lengan Pendek</h3>
+                    <p class="price">Rp 115.000</p>
+                    <button class="btn-buy-now" onclick="openModal('Kemeja Lengan Pendek')">Order via WhatsApp</button>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="card-img">
+                    <img src="vneck.jpg" alt="Kaos V-Neck">
+                    <div class="overlay-action">
+                        <button onclick="openModal('Premium V-Neck Tee')">Quick View</button>
+                    </div>
+                </div>
+                <div class="product-info">
+                    <h3>Premium V-Neck Tee</h3>
+                    <p class="price">Rp 85.000</p>
+                    <button class="btn-buy-now" onclick="openModal('Premium V-Neck Tee')">Order via WhatsApp</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="reviews-section" id="testimoni">
+        <div class="section-header">
+            <span class="tag">Trusted by Customers</span>
+            <h2 class="section-title">Verified Reviews</h2>
+            <div class="line"></div>
+        </div>
+    <section class="recent-orders" id="data-pesanan">
+        <div class="section-header">
+            <span class="tag">Live Updates</span>
+            <h2 class="section-title">Pesanan Terbaru</h2>
+            <div class="line"></div>
+        </div>
+        <div class="orders-container">
+            <table class="orders-table">
+                <thead>
+                    <tr>
+                        <th>Waktu</th>
+                        <th>Nama Pembeli</th>
+                        <th>Produk</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody id="orders-list">
+                    </tbody>
+            </table>
+        </div>
+    </section>
+        <div id="reviews-container" class="testi-grid">
+            </div>
+    </section>
+
+    <footer>
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <img src="logo derma.jpeg" alt="Logo DERMA">
+                <p>Membawa kenyamanan berbalut kemewahan dalam setiap helai pakaian Anda.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+                </div>
+            </div>
+            <div class="footer-contact">
+                <h4>Contact Us</h4>
+                <p><i class="fa-solid fa-envelope"></i> admin@derma.com</p>
+                <p><i class="fa-solid fa-location-dot"></i> Medan, Indonesia</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            &copy; 2026 DERMAWANTY GULO. | Luxury Basic Shirt.
+        </div>
+    </footer>
+
+    <div id="checkout-modal" class="modal-overlay">
+        <div class="modal-box">
+            <button class="close-icon" onclick="closeModal()">&times;</button>
+            <div class="modal-header">
+                <h2>Checkout Order</h2>
+                <p>Item: <span id="modal-product-name" style="color: var(--lilac-dark); font-weight: 600;"></span></p>
+            </div>
+            
+            <form id="order-form">
+                <div class="input-group">
+                    <label><i class="fa-solid fa-user"></i> Nama Lengkap</label>
+                    <input type="text" id="name" placeholder="Contoh: Budi Santoso" required>
+                </div>
+                <div class="input-group">
+                    <label><i class="fa-solid fa-map-location-dot"></i> Alamat Lengkap</label>
+                    <textarea id="address" placeholder="Sertakan Kecamatan & Kota" required></textarea>
+                </div>
+                <div class="row">
+                    <div class="input-group">
+                        <label>Pilih Ukuran</label>
+                        <select id="size-select">
+                            <option value="S">S (Small)</option>
+                            <option value="M">M (Medium)</option>
+                            <option value="L">L (Large)</option>
+                            <option value="XL">XL (X-Large)</option>
+                        </select>
+                    </div>
+                    <div class="input-group">
+                        <label>Pembayaran</label>
+                        <select id="payment-method">
+                            <option value="Transfer Bank">Transfer Bank</option>
+                            <option value="COD">COD (Bayar di Tempat)</option>
+                        </select>
+                    </div>
+                </div>
+                <button type="button" class="btn-wa-luxury" onclick="sendWhatsApp()">
+                    <i class="fa-brands fa-whatsapp"></i> Kirim Pesanan ke WhatsApp
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

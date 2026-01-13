@@ -1,0 +1,165 @@
+:root {
+    --lilac-light: #F8F3FF;
+    --lilac-main: #C8A2C8;
+    --lilac-dark: #8E6E8E;
+    --gold: #D4AF37;
+    --black: #1A1A1A;
+    --white: #ffffff;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
+body { background: var(--lilac-light); color: var(--black); scroll-behavior: smooth; }
+
+.promo-bar { background: var(--lilac-dark); color: white; text-align: center; padding: 10px; font-size: 0.8rem; font-weight: 600; letter-spacing: 1px; }
+
+nav { background: var(--white); padding: 5px 5%; position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 10px rgba(0,0,0,0.05); }
+.nav-container { display: flex; justify-content: space-between; align-items: center; max-width: 1200px; margin: auto; }
+.logo img { height: 100px; width: auto; }
+.nav-links { display: flex; list-style: none; gap: 30px; align-items: center; }
+.nav-links a { text-decoration: none; color: var(--black); font-weight: 500; transition: 0.3s; }
+.nav-links a.active, .nav-links a:hover { color: var(--lilac-main); }
+
+.hero { height: 70vh; display: flex; align-items: center; justify-content: center; text-align: center; background: linear-gradient(rgba(248, 243, 255, 0.8), rgba(248, 243, 255, 0.8)), url('basic.jpg') center/cover; }
+.hero h1 { font-family: 'Playfair Display', serif; font-size: 3.5rem; margin: 15px 0; line-height: 1.2; }
+.hero h1 em { color: var(--lilac-main); }
+.sub-title { color: var(--lilac-dark); letter-spacing: 4px; font-weight: 600; text-transform: uppercase; font-size: 0.8rem; }
+.btn-primary { display: inline-block; background: var(--black); color: white; padding: 15px 40px; text-decoration: none; border-radius: 50px; margin-top: 20px; transition: 0.3s; }
+.btn-primary:hover { background: var(--lilac-main); transform: translateY(-3px); }
+
+.products-section { padding: 80px 5%; max-width: 1200px; margin: auto; }
+.section-header { text-align: center; margin-bottom: 50px; }
+.section-title { font-family: 'Playfair Display', serif; font-size: 2.5rem; }
+.line { width: 60px; height: 3px; background: var(--lilac-main); margin: 15px auto; }
+
+.product-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; }
+.product-card { background: var(--white); overflow: hidden; transition: 0.4s; position: relative; }
+.card-img { position: relative; height: 380px; overflow: hidden; }
+.card-img img { width: 100%; height: 100%; object-fit: cover; transition: 0.6s; }
+.product-card:hover .card-img img { transform: scale(1.08); }
+
+.badge-gold { position: absolute; top: 15px; left: 15px; background: var(--gold); color: white; padding: 5px 12px; font-size: 0.7rem; font-weight: 600; z-index: 10; }
+.overlay-action { position: absolute; bottom: -60px; left: 0; width: 100%; transition: 0.4s; padding: 15px; }
+.product-card:hover .overlay-action { bottom: 0; }
+.overlay-action button { width: 100%; padding: 10px; background: rgba(255,255,255,0.9); border: none; font-weight: 600; cursor: pointer; }
+
+.product-info { padding: 20px; text-align: center; }
+.product-info h3 { font-family: 'Playfair Display', serif; font-size: 1.1rem; }
+.price { color: var(--lilac-dark); font-weight: 600; margin: 10px 0; font-size: 1.1rem; }
+.btn-buy-now { width: 100%; padding: 12px; background: var(--black); color: white; border: none; cursor: pointer; transition: 0.3s; font-weight: 600; }
+.btn-buy-now:hover { background: var(--lilac-main); }
+
+footer { background: var(--white); padding: 60px 5% 20px; border-top: 1px solid #eee; }
+.footer-grid { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 30px; max-width: 1200px; margin: auto; }
+.footer-brand img { height: 60px; margin-bottom: 15px; }
+.footer-bottom { text-align: center; margin-top: 40px; padding-top: 20px; border-top: 1px solid #eee; font-size: 0.8rem; color: #999; }
+
+/* Modal Luxury */
+.modal-overlay { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.7); z-index: 2000; justify-content: center; align-items: center; }
+.modal-box { background: white; padding: 40px; width: 90%; max-width: 450px; position: relative; animation: slideUp 0.4s ease; }
+@keyframes slideUp { from { transform: translateY(50px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
+.close-icon { position: absolute; top: 15px; right: 15px; font-size: 1.5rem; border: none; background: none; cursor: pointer; color: #888; }
+.modal-subtitle { color: var(--gold); font-weight: 600; margin-bottom: 25px; font-size: 0.9rem; }
+.input-group { margin-bottom: 15px; text-align: left; }
+.input-group label { font-size: 0.75rem; font-weight: 700; text-transform: uppercase; color: #666; display: block; margin-bottom: 5px; }
+.input-group input, .input-group textarea, .input-group select { width: 100%; padding: 12px; border: 1px solid #eee; background: #f9f9f9; }
+.row { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; }
+.btn-wa-luxury { width: 100%; padding: 15px; background: #25D366; color: white; border: none; font-weight: 600; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 10px; margin-top: 10px; }
+
+@media (max-width: 768px) {
+    .nav-links { display: none; }
+    .hero h1 { font-size: 2.2rem; }
+    .row { grid-template-columns: 1fr; }
+}
+/* --- SECTION DATA PEMESAN TERBARU (STYLE KHUSUS DOSEN) --- */
+.recent-orders { 
+    padding: 80px 5%; 
+    background: var(--white); 
+    text-align: center;
+}
+
+.orders-container { 
+    max-width: 1000px; 
+    margin: 40px auto; 
+    overflow-x: auto; /* Agar tabel aman saat dibuka di HP */
+    background: var(--white);
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(200, 162, 200, 0.1); /* Shadow soft warna lilac */
+    border: 1px solid var(--lilac-light);
+}
+
+.orders-table { 
+    width: 100%; 
+    border-collapse: collapse; 
+    text-align: left;
+    min-width: 600px; /* Menjaga tabel tidak terlalu sempit */
+}
+
+.orders-table th { 
+    background: var(--lilac-main); 
+    color: var(--white); 
+    padding: 18px; 
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+}
+
+.orders-table td { 
+    padding: 15px 18px; 
+    border-bottom: 1px solid var(--lilac-light); 
+    font-size: 0.9rem; 
+    color: var(--black);
+}
+
+.orders-table tr:hover {
+    background-color: var(--lilac-light); /* Efek hover saat baris disentuh */
+    transition: 0.3s;
+}
+
+.orders-table tr:last-child td {
+    border-bottom: none;
+}
+
+.status-badge { 
+    background: #e8f5e9; /* Hijau muda */
+    color: #2e7d32; /* Hijau tua */
+    padding: 6px 12px; 
+    border-radius: 20px; 
+    font-size: 0.75rem; 
+    font-weight: 700;
+    display: inline-block;
+    border: 1px solid #c8e6c9;
+}
+
+/* --- SECTION REVIEWS (KEMBALI KE LILAC STYLE) --- */
+.testi-grid { 
+    display: grid; 
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
+    gap: 25px; 
+    margin-top: 30px;
+}
+
+.testi-card { 
+    background: var(--white); 
+    padding: 30px; 
+    border-radius: 15px; 
+    border: 1px solid var(--lilac-light);
+    box-shadow: 0 5px 15px rgba(200, 162, 200, 0.05);
+    text-align: left;
+}
+
+.testi-card .stars { 
+    color: var(--gold); 
+    margin-bottom: 10px; 
+}
+
+/* Animasi Fade In untuk data baru */
+#orders-list tr {
+    animation: fadeInOrder 0.6s ease forwards;
+}
+
+@keyframes fadeInOrder {
+    from { opacity: 0; transform: translateY(15px); }
+    to { opacity: 1; transform: translateY(0); }
+}
